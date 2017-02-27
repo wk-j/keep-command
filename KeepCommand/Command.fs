@@ -17,7 +17,7 @@ type Verb =
 
 let findKeepingCommand() = 
     let keeps = 
-        Directory.EnumerateFiles("./", "commands.toml", SearchOption.AllDirectories) 
+        Directory.EnumerateFiles("./", ".keep.toml", SearchOption.AllDirectories) 
         |> Seq.toList
         |> List.map (File.ReadAllText >> parse)
     keeps |> List.collect(fun x -> [for k in x.Keys do yield (k, sprintf "%A" (snd <| x.TryGetValue(k))) ])

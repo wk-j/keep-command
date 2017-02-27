@@ -7,7 +7,7 @@ open System
 
 [<EntryPoint>]
 let main argv = 
-    let file = Path.Combine(".keep","commands.toml")
+    let file = Path.Combine(".keep.toml")
     startKeep file (argv |> Seq.toList)
     0 // return an integer exit code
 
