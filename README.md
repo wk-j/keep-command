@@ -1,6 +1,6 @@
 ## Keep
 
-Keep useful command in TOML file and rerun any time
+Keep useful command in TOML file and rerun anytime
 
 ## Installation
 
