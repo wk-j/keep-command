@@ -1,7 +1,7 @@
 {
   "name": "keep-command",
   "version": "0.0.1",
-  "description": "Keep useful commands in TOML and rerun any time",
+  "description": "Keep useful commands in TOML file and rerun any time",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
