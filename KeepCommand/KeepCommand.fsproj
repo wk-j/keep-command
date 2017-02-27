@@ -54,7 +54,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssemblyInfo.fs" />
+    <Compile Include="Executor.fs" />
+    <Compile Include="Formatter.fs" />
     <Compile Include="TomlParser.fs" />
+    <Compile Include="Command.fs" />
     <Compile Include="Program.fs" />
     <None Include="packages.config" />
   </ItemGroup>

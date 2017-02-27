@@ -1,0 +1,27 @@
+{
+  "name": "vscode-open-recent",
+  "version": "0.0.4",
+  "description": "Open recent Visual Studio Code project from Command Line",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wk-j/vscode-open-recent.git"
+  },
+  "bin": {
+    "keep": "./index.js"
+  },
+  "keywords": [
+    "vscode",
+    "Visual Studio Code"
+  ],
+  "author": "wk <somnuk.wk@gmail.com> (https://github.com/wk-j)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wk-j/vscode-open-recent/issues"
+  },
+  "homepage": "https://github.com/wk-j/vscode-open-recent#readme",
+  "dependencies": {}
+}
