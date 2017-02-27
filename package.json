@@ -1,27 +1,28 @@
 {
-  "name": "vscode-open-recent",
-  "version": "0.0.4",
-  "description": "Open recent Visual Studio Code project from Command Line",
+  "name": "keep-command",
+  "version": "0.0.1",
+  "description": "Keep useful commands in TOML and rerun any time",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wk-j/vscode-open-recent.git"
+    "url": "git+https://github.com/bcircle/keep-command.git"
   },
   "bin": {
     "keep": "./index.js"
   },
   "keywords": [
-    "vscode",
-    "Visual Studio Code"
+    "cmd",
+    "bash",
+    "Command Line"
   ],
   "author": "wk <somnuk.wk@gmail.com> (https://github.com/wk-j)",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/wk-j/vscode-open-recent/issues"
+    "url": "https://github.com/bcircle/keep-command/issues"
   },
-  "homepage": "https://github.com/wk-j/vscode-open-recent#readme",
+  "homepage": "https://github.com/bcircle/keep-command#readme",
   "dependencies": {}
 }

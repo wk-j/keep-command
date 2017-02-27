@@ -1,0 +1,4 @@
+build = "xbuild"
+npm-link = "npm link"
+npm-unlink = "npm unlink"
+list-file = "ls -al"

@@ -18,10 +18,10 @@ let private write message =
     | Info str -> write str ConsoleColor.White
     | Error str ->  write str ConsoleColor.Red
 
-let executeCommand cmd args=
+let executeCommand (cmd:string) args=
     Console.ForegroundColor <- ConsoleColor.White
     let info = ProcessStartInfo()
-    info.FileName <- cmd
+    info.FileName <- cmd.Trim()
     info.Arguments <- args
     info.UseShellExecute <- true
 

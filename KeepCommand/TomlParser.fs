@@ -38,3 +38,19 @@ let parse text =
   | __ -> ()
   toml
 
+open System.IO
+
+let removeKey file key =
+  match File.Exists file with 
+  | true -> 
+    let lines = file |> File.ReadAllLines |> Array.filter (fun x -> not <| x.StartsWith key)
+    File.WriteAllLines(file, lines)
+  | false -> ()
+
+let addKey file key value =
+  match File.Exists file with
+  | true ->
+    let lines = file |> File.ReadAllLines |> Array.filter (fun x -> not <| x.StartsWith key)
+    let newLine = sprintf "%s = \"%s\"" key value
+    File.WriteAllLines(file, Array.append lines [|newLine|] );
+  | false -> ()

@@ -4,13 +4,14 @@ open System
 
 type private Konsole = System.Console
 
-type private Text =
+type Text =
       | Info of string
       | Prompt of string
       | Key of string
       | Description of string
+      | Error of string
 
-let private write text =
+let write text =
     let setColor color = Konsole.ForegroundColor <- color
     let writeLine x = Konsole.WriteLine(x.ToString())
     let write x = Konsole.Write(x.ToString())
@@ -27,6 +28,9 @@ let private write text =
         write text
     | Description text ->
         setColor ConsoleColor.White
+        writeLine text
+    | Error text ->
+        setColor ConsoleColor.Red
         writeLine text
 
 let readInput (info:string) options   = 
