@@ -2,7 +2,6 @@ module KeepCommand.Command
 
 open System
 open System.IO
-open System.Linq
 
 open KeepCommand.TomlParser
 open KeepCommand.Formatter
@@ -16,11 +15,9 @@ type Verb =
     | Remove of Name
 
 let findKeepingCommand() = 
-    let keeps = 
-        Directory.EnumerateFiles("./", ".keep.toml", SearchOption.AllDirectories) 
-        |> Seq.toList
-        |> List.map (File.ReadAllText >> parse)
-    keeps |> List.collect(fun x -> [for k in x.Keys do yield (k, sprintf "%A" (snd <| x.TryGetValue(k))) ])
+    Directory.EnumerateFiles("./", ".keep.toml", SearchOption.AllDirectories) 
+    |> Seq.toList
+    |> List.map (File.ReadAllText >> parse)
 
 let showCommands() = 
     let command = findKeepingCommand()

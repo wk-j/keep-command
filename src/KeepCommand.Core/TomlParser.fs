@@ -1,6 +1,9 @@
 module KeepCommand.TomlParser
 // based on https://github.com/mackwic/To.ml and https://github.com/seliopou/toml
 open System
+
+(*
+
 open FParsec
 type Token = KeyGroup of string list | KeyValue of string * obj
 
@@ -37,8 +40,25 @@ let parse text =
         toml.Add(key, value)
   | __ -> ()
   toml
-
+*)
 open System.IO
+
+type Keeper = {
+  Key: string
+  Value: string
+}
+
+let parse (text:string) = 
+
+  let findKeeper (line:string) = 
+    let tokens = line.Split('=') |> Seq.map (fun x -> x.Trim()) |> Seq.toList
+    match tokens with
+    | [k;v] ->
+      Some { Key = k; Value = v}
+    | _ -> None
+
+  let results = text.Split('\n') |> Seq.map findKeeper |> Seq.choose id
+  (results)
 
 let removeKey file key =
   match File.Exists file with 
