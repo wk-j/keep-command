@@ -1,11 +1,9 @@
 ﻿namespace KeepCommand.Tests
 open System
-open NUnit.Framework
 open System
-
 open KeepCommand.TomlParser
+open Xunit
 
-[<TestFixture>]
 type Test() = 
 
     let example =  """
@@ -47,8 +45,7 @@ type Test() =
       ]
     """ 
 
-
-    [<Test>]
+    [<Fact>]
     member x.TestCase() =
         for tomlValue in parse example do
           printfn "%A %A" tomlValue.Key tomlValue.Value
