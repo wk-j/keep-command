@@ -18,11 +18,15 @@ let private write message =
     | Info str -> write str ConsoleColor.White
     | Error str ->  write str ConsoleColor.Red
 
+
+let expand args =
+    Environment.ExpandEnvironmentVariables args
+
 let executeCommand (cmd:string) args=
     Console.ForegroundColor <- ConsoleColor.White
     let info = ProcessStartInfo()
     info.FileName <- cmd.Trim()
-    info.Arguments <- args
+    info.Arguments <- args |> expand
     info.UseShellExecute <- true
 
     let ps = new Process()

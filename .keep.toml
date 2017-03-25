@@ -1,1 +1,3 @@
-build = "xbuild"
+Build = "xbuild"
+Ls = "ls -al"
+Stop-All = "docker stop $(docker ps -a -q)"
