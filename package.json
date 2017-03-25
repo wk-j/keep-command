@@ -1,6 +1,6 @@
 {
   "name": "keep-command",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Keep useful commands in TOML file and rerun anytime",
   "main": "index.js",
   "scripts": {

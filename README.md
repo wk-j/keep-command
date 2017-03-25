@@ -1,5 +1,7 @@
 ## Keep
 
+[![Build Status](https://travis-ci.org/wk-j/keep-command.svg?branch=master)](https://travis-ci.org/wk-j/keep-command)
+
 Keep useful command in TOML file and rerun anytime
 
 ## Installation

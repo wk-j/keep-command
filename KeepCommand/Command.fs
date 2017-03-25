@@ -50,9 +50,9 @@ let startKeep file argv =
     | "init" :: rest ->
         let info = FileInfo(file) 
         let dir = info.Directory
-        if dir.Exists = false then
+        if not dir.Exists then
             dir.Create()
-        if info.Exists = false then
+        if not info.Exists then
             File.Create(info.FullName) |> ignore
         Info(sprintf "init %s" file) |> write
     | "add" :: rest -> 
